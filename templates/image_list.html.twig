@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row g-2 align-items-center">
+        {% for image in images %}
+        <div class="col-sm-3 ">
+            <img src="{{ image.link }}" class="p-3 img-fluid w-100">
+        </div>
+        {% endfor %}
+        <div class="col-sm-12 text-center ">
+            <h1>На странице обнаружено {{ count }} изображений на {{ total_size }} Мб</h1>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

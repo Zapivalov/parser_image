@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container " style="width: 50%;">
+    <form action="{{ path('app.get_parser_image') }}" method="post">
+            <div class="row py-3">
+                <div class="col-sm-8 ">
+                    <div class="form-group">
+                        <label>Введите URL:</label>
+                        <input type="text" required="required" class="form-control"  name="url" placeholder="https://example.com">
+                    </div>
+                </div>
+                <div class="col-sm-4 align-self-end">
+                    <button class="w-100 btn btn-primary" type="submit">Go</button>
+                </div>
+            </div>
+    </form>
+</div>
+{% endblock %}
